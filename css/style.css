@@ -4,19 +4,53 @@
     box-sizing: border-box;
 }
 
+
+
+/* div fonticons*/
+.fonticons {
+    height: 50px;
+    color: rgb(17, 184, 240);
+}
+
+.fonticons h2 {
+    padding-top: 20px;
+    font-size: 30px;
+}
+
+
+
+/* div filter */
+.filter {
+    height: 60px;
+    background-color: rgb(19, 183, 233);
+}
+
+
+
+/* div container_items */
 #container_items {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: rgb(210, 193, 193);
 }
 
 .items {
     text-align: center;
     width: 200px;
     height: 100px;
-    margin: 20px;
-    background-color: grey;
+    margin: 20px 30px;
+    background-color: white;
     padding-top: 30px;
+    border-radius: 10px;
+}
+
+i {
+    font-size: 30px;
+}
+
+p {
+    font-size: 12px;
 }
 
 .blue {
@@ -28,5 +62,5 @@
 }
 
 .violet {
-    color: violet;
+    color: rgb(226, 39, 226);
 }
