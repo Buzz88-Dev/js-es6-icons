@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.items {
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    background-color: grey;
+    padding-top: 30px;
+}
+
+.blue {
+    color: blue;
+}
+
+.orange {
+    color: orange;
+}
+
+.violet {
+    color: violet;
+}
