@@ -115,33 +115,20 @@ let myArrayObject = [
 	}
 ];
 
-// mi collego al div principale con id container-items
-let myDivContainer = document.getElementById("container_items");
-
-// creo il mio div interno con classe items
-let myDivItems = document.createElement("div");
-myDivItems.classList.add("items");
-
-// creo al suo interno un tag i
-let myi = document.createElement("i");
-
-// e creo al suo interno un tag p
-let myp = document.createElement("p");
-
-console.log(myArrayObject[0].name);
-
-
 for (let i = 0; i < myArrayObject.length; i++){
 
+	// mi collego al div principale con id container-items
 	let myDivContainer = document.getElementById("container_items");
 
+	// creo il mio div interno con classe items
 	let myDivItems = document.createElement("div");
 	myDivItems.classList.add("items");
 
+	// creo al suo interno un tag i
 	let myi = document.createElement("i");
 	myi.classList.add(myArrayObject[i].family)
 	myi.classList.add(myArrayObject[i].prefix + myArrayObject[i].name);
-	
+
 	if (myArrayObject[i].type === "animal"){
 		myi.classList.add("blue");
 	} else if (myArrayObject[i].type === "vegetable"){
@@ -150,9 +137,10 @@ for (let i = 0; i < myArrayObject.length; i++){
 		myi.classList.add("violet");
 	}
 	
-
+	// e creo al suo interno un tag p
 	let myp = document.createElement("p");
 	let inseriscoName = myArrayObject[i].name;
+	inseriscoName = inseriscoName.toLocaleUpperCase();
 	myp.append(inseriscoName);
 
 
@@ -161,19 +149,31 @@ for (let i = 0; i < myArrayObject.length; i++){
 }
 
 
+// console.log(myArrayObject[2].name);
+// stampo nella console "dog", ovvero il valore della chiave dell array[2]
+
+
 // myArrayObject.forEach((element) => {
-
 // 	console.log(element.type);
-// 	if (element.type === 'animal'){
-// 		myi.classList.add("blue");
+// })
+// stampo nella console tutti i valori della chiave type: quindi 8 volte animal, 4 volte vegetable, 4 volte user
+
+
+// togliere i commenti sotto e analizzare cosa succede
+// let myi = document.createElement("i");
+// let myDivItems = document.createElement("div");
+// let myDivContainer = document.getElementById("container_items");
+// let animalBlue = myArrayObject.filter((element) => {
+
+// 	if(element.type === 'animal') {
+// 		console.log(element.type);
+// 		myi.classList.add("ciao");
+// 		myDivItems.append(myi);
+// 		myDivContainer.append(myDivItems);
 // 	}
 // })
 
-// let animalBlue = myArrayObject.filter((element) => {
-// 	if(element.type === 'animal') {
-// 		myi.classList.add("blue");
-// 	}
-// })
+
 
 
 
