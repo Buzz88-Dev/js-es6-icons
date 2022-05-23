@@ -121,7 +121,8 @@ let myDivContainer = document.getElementById("container_items");
 let button = document.getElementById("mybutton");
 let filter = document.getElementById("filter");
 
-// tramite filter creo un array di oggetti che hanno come valore di type animal
+
+// con filter mi restituisce in questo caso il mio array solo con il type dell item richiesto
 let arrAnimal = myArrayObject.filter((item) => {
 	if(item.type === "animal"){
 		return true;
@@ -129,7 +130,8 @@ let arrAnimal = myArrayObject.filter((item) => {
 })
 console.log(arrAnimal);
 
-// tramite filter creo un array di oggetti che hanno come valore di type vegetable
+
+
 let arrVegetable = myArrayObject.filter((item) => {
 	if(item.type === "vegetable"){
 		return true;
@@ -138,7 +140,7 @@ let arrVegetable = myArrayObject.filter((item) => {
 console.log(arrVegetable);
 
 
-// tramite filter creo un array di oggetti che hanno come valore di type user
+
 let arrUser = myArrayObject.filter((item) => {
 	if(item.type === "user"){
 		return true;
@@ -160,7 +162,7 @@ for (let i = 0; i < myArrayObject.length; i++){
 	// creo al suo interno un tag i
 	let myi = document.createElement("i");
 	myi.classList.add(myArrayObject[i].family)
-		myi.classList.add(myArrayObject[i].prefix + myArrayObject[i].name);
+	myi.classList.add(myArrayObject[i].prefix + myArrayObject[i].name);
 	
 	if (myArrayObject[i].type === "animal"){
 		myi.classList.add("blue");
@@ -310,20 +312,22 @@ button.addEventListener("click",
 
 
 
+console.log(myArrayObject[2].name);
+//stampo nella console dog, ovvero il valore della chiave dell array in posizione[2]
 
 
 
-
-
-// console.log(myArrayObject[2].name);
-// stampo nella console "dog", ovvero il valore della chiave dell array in posizione[2]
-
-
-// myArrayObject.forEach((element) => {
-// 	console.log(element.type);
-// })
+myArrayObject.forEach((element) => {
+ 	console.log(element.type);
+})
 // stampo nella console tutti i valori della chiave type: quindi 8 volte animal, 4 volte vegetable, 4 volte user
 
+
+
+myArrayObject.forEach((element) => {
+	console.log(element);
+})
+// stampo nella console tutte le proprieta (chiave/valore) dell miArrayObject
 
 // togliere i commenti sotto e analizzare cosa succede
 // let myi = document.createElement("i");
